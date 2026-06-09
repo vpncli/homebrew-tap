@@ -4,9 +4,9 @@
 #
 # The sha256 placeholders are filled in automatically by the release workflow.
 class Vpn < Formula
-  desc "Intuitive xray VPN manager: server profiles, routing presets, pretty TUI"
+  desc "Manage every VPN from your terminal: xray proxy plus full-tunnel apps"
   homepage "https://github.com/vpncli/vpn"
-  version "0.1.0"
+  version "1.0.2"
   license "MIT"
 
   # xray is the actual proxy engine; vpn drives it.
@@ -15,22 +15,22 @@ class Vpn < Formula
   on_macos do
     on_arm do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-darwin-arm64"
-      sha256 "118c9a5ab847549901168a16210202027e7d3d11776b8cdab35b3238943f95dd"
+      sha256 "081ab2fe2723b4d27ac706f8ba5fb232e5c3838f161d30637a3dd6a1d1969e3c"
     end
     on_intel do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-darwin-x64"
-      sha256 "cfc6bf6964dcab1221fc929dd1b0228697dea1feccb3e2e855ec6284bad57437"
+      sha256 "5c220716b61bd5d35a8afe937f47655b5e53f24d5798e352cad8fdb5fba23977"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-linux-arm64"
-      sha256 "10528219e627db84a7ff10fffb2386e8d8e7ddcf54c49ec6198059a1d6dbd26a"
+      sha256 "79212b7dd8bac5c7b9ed968e0fd5047e0eedec102eae38e7d6baadf3e0d4e677"
     end
     on_intel do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-linux-x64"
-      sha256 "55f8875dbf6c149b3233889368edceb02396be56f03064455c8b5bf473b01d13"
+      sha256 "9093c19f8465e674f7af765a41a1f081bb8a23b9c54042c3c0daa075614b759d"
     end
   end
 
@@ -41,6 +41,6 @@ class Vpn < Formula
   end
 
   test do
-    assert_match "intuitive xray VPN manager", shell_output("#{bin}/vpn help")
+    assert_match "manage every VPN from your terminal", shell_output("#{bin}/vpn help")
   end
 end
