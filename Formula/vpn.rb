@@ -6,7 +6,7 @@
 class Vpn < Formula
   desc "Manage every VPN from your terminal: xray proxy plus full-tunnel apps"
   homepage "https://github.com/vpncli/vpn"
-  version "1.0.3"
+  version "1.0.4"
   license "MIT"
 
   # xray is the actual proxy engine; vpn drives it.
@@ -15,22 +15,22 @@ class Vpn < Formula
   on_macos do
     on_arm do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-darwin-arm64"
-      sha256 "d58c4b62d7ce0bbbfe34aa3d338c596f63e601cbdbd99f60d6d0e70fed38056f"
+      sha256 "b5b754dc06737fff45daadba7faadf14815f837f83dcb10282df6df9e4582ba6"
     end
     on_intel do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-darwin-x64"
-      sha256 "420c377ba7e725765654a3e278740467041805823f77a0029d25ca4d7b4f8889"
+      sha256 "a70c92cd457ffa3c60eeed51333c110cdd64130d111538658a66d32d773f06e1"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-linux-arm64"
-      sha256 "4a9cad0937f1a228b210406007ea2609ef990a11dd9d421e2118213a50a6de6a"
+      sha256 "44f9402f802432f119f7acef5aeabfd0645dd2bfc1dab741603f9e5993194804"
     end
     on_intel do
       url "https://github.com/vpncli/vpn/releases/download/v#{version}/vpn-linux-x64"
-      sha256 "154af0be6458691474434112bfbf8fd64029ce40fe65b9b395d70adb90120515"
+      sha256 "f76874bd667bb481f4badee7bf4ca8d92dc58bf7dbc12802eb8338c76fcabda8"
     end
   end
 
